@@ -1,0 +1,108 @@
+Script started on Tue 21 Mar 2023 07:53:31 PM EDT
+==160571== Memcheck, a memory error detector
+==160571== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==160571== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==160571== Command: ws.exe
+==160571== 
+Enter the following:
+ 1> 12345678
+ 2> 1111
+ 3> this is a very long name that exceeds 40 characters
+ 4> Chisel
+ 5> -1
+ 6> abc
+ 7> 10
+ 8> abc
+ 9> n
+10> abc
+11> 0
+12> 100
+13> 10
+Please enter the Tool information: 
+Sku
+> 12345678
+SKU too long
+> 1111
+Name
+> this is a very long name that exceeds 40 characters
+Item name too long
+> Chisel
+Price
+> -1
+Invalid price value
+> abc
+Invalid price value
+> 10
+Taxed?
+(Y)es/(N)o: abc
+Only 'y' and 'n' are acceptable: n
+Quantity
+> abc
+Invalid quantity value
+> 0
+Invalid quantity value
+> 100
+Invalid quantity value
+> 10
+1234   |Screw Driver        |  12.32| X |  90|  1252.94|
+2345   |The Claw Hammer     |  15.21|   |  50|   760.50|
+3456   |Utility Knife       |  20.10| X |  60|  1362.78|<- Knife!
+4567   |Tape Measure - Level| 112.30|   |  10|  1123.00|
+1111   |Chisel              |  10.00|   |  10|   100.00|
+Total price of all items: 4599.22
+First name in dictionary:
+=============v
+Name:        Chisel
+Sku:         1111
+Price:       10.00
+Price + tax: N/A
+Stock Qty:   10
+
+| Screw Driver        |     13.92 |  T  |
+| The Claw Hammer     |     15.21 |     |
+| Utility Knife       |     22.71 |  T  |
+| Tape Measure - Level|    112.30 |     |
+| Chisel              |     10.00 |     |
+Total cost: 174.14
+qty: 90
++=1: 91
+-=2: 89
+------------------
+qty: 50
++=1: 51
+-=2: 49
+------------------
+qty: 60
++=1: 61
+-=2: 59
+------------------
+qty: 10
++=1: 11
+-=2: 9
+------------------
+qty: 10
++=1: 11
+-=2: 9
+------------------
+<thefile>T,1234,Screw Driver,12.32,1,89
+T,2345,The Claw Hammer,15.21,0,49
+T,3456,Utility Knife,20.10,1,59
+T,4567,Tape Measure - Level - Laser - Combo,112.30,0,9
+T,1111,Chisel,10.00,0,9
+</thefile>
+1234   |Screw Driver        |  12.32| X |  99|  1378.24|
+Record number 1 SKU too long
+Record number 2 Item name too long
+Record number 3 Invalid price value
+Record number 4 Invalid quantity value
+4567   |Tape Measure - Level| 112.30|   |  10|  1123.00|
+==160571== 
+==160571== HEAP SUMMARY:
+==160571==     in use at exit: 0 bytes in 0 blocks
+==160571==   total heap usage: 95 allocs, 95 frees, 109,847 bytes allocated
+==160571== 
+==160571== All heap blocks were freed -- no leaks are possible
+==160571== 
+==160571== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Tue 21 Mar 2023 07:54:25 PM EDT

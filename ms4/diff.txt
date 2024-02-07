@@ -1,0 +1,14 @@
+In line number 94 of your output:
+The output should be:
+9852   |Seedless Grapes     |  10.56|   |  20|   211.20|  2017/05/19 |
+                                                         ^
+But your output is: 
+9852   |Seedless Grapes     |  10.56|   |  20|   211.20| 2017/05/19 |
+                                                         ^
+
+Unmatched character details:
+The character in column 58 is supposed to be:
+  [Space] ASCII code(32)
+but you printed
+  [2] ASCII code(50)
+

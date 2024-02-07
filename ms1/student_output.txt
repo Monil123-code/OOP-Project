@@ -1,0 +1,82 @@
+Script started on Sat 11 Mar 2023 07:44:14 PM EST
+==137741== Memcheck, a memory error detector
+==137741== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==137741== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==137741== Command: ms
+==137741== 
+>>>> Loading Items...........................................................
+Loading data from datafile.csv
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> abc
+Invalid Integer, try again: -1
+[0<=value<=5], retry: > 6
+[0<=value<=5], retry: > 1
+>>>> Listing Items...........................................................
+Running listItems()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 2
+>>>> Adding Item to the store................................................
+Running addItem()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 3
+>>>> Remove Item.............................................................
+Running removeItem()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 4
+>>>> Select an item to stock.................................................
+Running stockItem()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 5
+>>>> Starting Point of Sale..................................................
+Running POS()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 0
+>>>> Saving Data.............................................................
+Saving data in datafile.csv
+Goodbye!
+==137741== 
+==137741== HEAP SUMMARY:
+==137741==     in use at exit: 0 bytes in 0 blocks
+==137741==   total heap usage: 1 allocs, 1 frees, 72,704 bytes allocated
+==137741== 
+==137741== All heap blocks were freed -- no leaks are possible
+==137741== 
+==137741== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Sat 11 Mar 2023 07:44:32 PM EST

@@ -1,0 +1,14 @@
+In line number 72 of your output:
+The output should be:
+Goodbye!
+         ^
+But your output is: 
+Goodbye!==137567== 
+        ^
+
+Unmatched character details:
+The character in column 9 is supposed to be:
+  [Empty Line] ASCII code(0)
+but you printed
+  [=] ASCII code(61)
+

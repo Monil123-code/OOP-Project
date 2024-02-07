@@ -1,0 +1,82 @@
+Script started on Fri 03 Mar 2023 06:23:47 PM EST
+==123499== Memcheck, a memory error detector
+==123499== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==123499== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==123499== Command: ws.exe
+==123499== 
+>>>> Loading Items...........................................................
+Loading data from datafile.csv
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> abc
+Invalid Integer, try again: -1
+[0<=value<=5], retry: > 6
+[0<=value<=5], retry: > 1
+>>>> Listing Items...........................................................
+Running listItems()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 2
+>>>> Adding Item to the store................................................
+Running addItem()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 3
+>>>> Remove Item.............................................................
+Running removeItem()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 4
+>>>> Select an item to stock.................................................
+Running stockItem()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 5
+>>>> Starting Point of Sale..................................................
+Running POS()
+The Sene-Store
+1- List items
+2- Add item
+3- Remove item
+4- Stock item
+5- Point of Sale
+0- exit program
+> 0
+>>>> Saving Data.............................................................
+Saving data in datafile.csv
+Goodbye!
+==123499== 
+==123499== HEAP SUMMARY:
+==123499==     in use at exit: 0 bytes in 0 blocks
+==123499==   total heap usage: 1 allocs, 1 frees, 72,704 bytes allocated
+==123499== 
+==123499== All heap blocks were freed -- no leaks are possible
+==123499== 
+==123499== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Fri 03 Mar 2023 06:24:07 PM EST

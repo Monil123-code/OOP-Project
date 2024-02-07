@@ -1,0 +1,125 @@
+Script started on Sat 11 Mar 2023 01:03:17 AM EST
+==10732== Memcheck, a memory error detector
+==10732== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10732== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==10732== Command: ws.exe
+==10732== 
+1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-<
+This is correct ><
+This is correct >Error G has a message<
+This copy assign is correct >Error G has a message<
+This copy is correct >Error G has a message<
+This is correct ><
+2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-<
+Checking constant values, POS.h: 
+Passed!
+Checking constant values passed
+3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-<
+Testing Date constructors and operator<< overload; 
+2023/03/11, 01:03 is the same as 2023/03/11, 01:03
+Passed!
+Testing Date(int, int, int) constructor and operator>> overload; 
+enter the following date: 2023/10/18
+> 2023/10/18
+Passed!
+Testing Date(int, int, int,int,int) constructor and operator>> overload; 
+enter the following date and time: 2023/9/7, 14:30
+> 2023/9/7, 14:30
+Passed!
+Testing Date(int, int, int,int,int=0) constructor and operator>> overload; 
+enter the following date and time: 2023/9/7, 15:0
+> 2023/9/7, 15:0
+Passed!
+You passed all Constructor tests!
+4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-<
+Testing the logical operators: 
+testing operator==
+passed!
+testing operator>=
+passed!
+testing operator<=
+passed!
+testing operator!=
+passed!
+testing operator<
+passed!
+testing operator>
+passed!
+testing operator<=
+passed!
+testing operator>=
+passed!
+You passed logical operator tests
+5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-<
+Testing operator<< and >> overload for iostream, 
+Please enter the following data and time:  2023/2/27, 1:35
+> 2023/2/27, 1:35
+Read From file:  2023/02/27, 01:35
+Passed
+Opening "dataEntries.txt" file for data entry...
+Year validation, 
+Data in file:  10/1/1
+> Read From file:  Invalid Year(10/01/01)
+Correctly detected Invalid Year
+Month validation, 
+Data in file:  2000/13/1
+> Read From file:  Invalid Month(2000/13/01)
+Correctly detected Invalid Month
+Day validation, 
+Data in file:  2000/1/50
+> Read From file:  Invalid Day(2000/01/50)
+Correctly detected Invalid Day
+Day validation, leap year:
+Data in file:  2020/2/29
+> Read From file:  2020/02/29
+passed!
+Hour validation, 
+Data in file:  2000/1/1, 25:10
+> Read From file:  Invalid Hour(2000/01/01, 25:10)
+Correctly detected Invalid Hour
+Minute validation, 
+Data in file:  2000/1/1, 23:60
+> Read From file:  Invlid Minute(2000/01/01, 23:60)
+Correctly detected Invlid Minute
+Testing istream read failure detection...
+Invalid year entry
+Data In file: abcd
+> Read From file:  Cannot read year entry(0/00/00, 00:00)
+Passed!
+Invalid month entry
+Data In file: 2023abcd
+> Read From file:  Cannot read month entry(2023/00/00, 00:00)
+Passed!
+Testing istream read failure detection...
+Invalid day entry
+Data In file: 2023/10abcd
+> Read From file:  Cannot read day entry(2023/10/00, 00:00)
+Passed!
+Testing istream read failure detection...
+Invalid hour entry
+Data In file: 2020/10/11abcd
+Read From file:  Cannot read hour entry(2020/10/11, 00:00)
+Passed!
+Testing istream read failure detection...
+Invalid minute entry
+Data In file: 2020/10/11, 8abcd
+Read From file:  Cannot read minute entry(2020/10/11, 08:00)
+Passed!
+Testing istream read failure detection...
+Correct entry
+Data In file: 2023/03/01, 20:43
+> Passed! Read From file:  2023/03/01, 20:43
+You passed all error handling tests.
+
+ If your output matches the required output, you can submit your
+ Milestone 2
+==10732== 
+==10732== HEAP SUMMARY:
+==10732==     in use at exit: 0 bytes in 0 blocks
+==10732==   total heap usage: 81 allocs, 81 frees, 108,344 bytes allocated
+==10732== 
+==10732== All heap blocks were freed -- no leaks are possible
+==10732== 
+==10732== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Sat 11 Mar 2023 01:03:52 AM EST
