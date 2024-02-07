@@ -1,0 +1,14 @@
+In line number 63 of your output:
+The output should be:
+Invalid Integer, try again: 0
+                            ^
+But your output is: 
+Invalid Integer, try again: -1
+                            ^
+
+Unmatched character details:
+The character in column 29 is supposed to be:
+  [0] ASCII code(48)
+but you printed
+  [-] ASCII code(45)
+
